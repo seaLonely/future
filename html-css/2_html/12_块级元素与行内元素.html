@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--块级元素-->
+    <!--  排版标签  -->
+    <p>独占一行</p>
+    <h1>独占一行</h1>
+    <h2>独占一行</h2>
+    <!--  行内元素  -->
+    <input></input>
+    <span>1234</span>
+    <hr/>
+    <!-- 规则1：块级元素中可以写行内元素、块级元素（几乎什么都能写）   -->
+    <div>
+        <h1>规则1</h1>
+    </div>
+    <!--  规则2：行内元素内可以写行内元素，但是不能写块级元素  -->
+    <span>
+        <span>规则2.1</span>
+        <span>规则2.2</span>
+        <input type="text"></input>
+    </span>
+    <span>测试4</span>
+    <!--  特殊规则：h1-h6 不能互相嵌套 -->
+    <!--  特殊规则：p元素内是不能写快元素 -->
+</body>
+</html>
