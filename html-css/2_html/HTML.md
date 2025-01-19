@@ -127,3 +127,43 @@
 1. br：换行
 2. hr：分割
 3. pre：按原文显示
+
+## 表单的基本结构
+1. 简单梳理
+   - form -> 表单(action用于指定表单的提交地址 target用于控制表单提交后如何打开页面_self是本页打开，_blank是新页签打开)、method(用于控制表单提交的方式)
+   - input(type 输入框的类型，目前使用的是text，表示文本类型 name 用于指定提交数据的名字)
+
+## 表单的常用控件
+1. 文本输入框
+   - type = text
+   - name属性：数据的名称
+   - value属性：输入框的默认输入值
+   - maxlength：输入框最大可输入长度
+2. 密码输入框
+   - type = password
+3. 单选框
+   - type = radio
+4. 复选框
+   - type = checkbox
+5. 隐藏域
+   - type = hidden
+6. 提交
+   - type = submit
+7. 重置
+   - type = reset
+8. 普通按钮
+   - type = button
+9. 文本域
+   - textarea
+10. 下拉框
+   - select
+   - option
+
+## 表单的禁用
+- disabled
+
+## 表单的label标签
+1. label标签可以实现表单控件相关联，关联之后点击文字，与只对应的表单控会获取焦点  
+两种与label关联的方式如下：
+- 让label标签的for属性等于表单控件的id
+- 把表单控件嵌套在label标签里面
