@@ -167,3 +167,53 @@
 两种与label关联的方式如下：
 - 让label标签的for属性等于表单控件的id
 - 把表单控件嵌套在label标签里面
+
+## 框架标签
+1. iframe 框架
+   - name 框架名字
+   - width 框架的宽
+   - height 框架的高度
+   - frame border 是否显示边框
+
+## 字符实体
+常见的字符实体
+- 空格 -> &amp;nbsp;
+- 小于号 -> &amp;lt;
+- 大于号 -> &amp;gt;
+- &和号 -> &amp;amp;
+- 元 -> &amp;yen;
+- 版权 -> &amp;copy;
+- 乘号 -> &amp;times;
+- 除号 -> &amp;divide;
+
+## HTML全局属性
+1. id 给标签指定唯一的标识，id是不可以重复的
+   - 可以让label标签与表单控件关联
+   - 不能再head、html、meta、script、style、title中进行使用
+2. class 给标签指定类名
+3. style 给标签指定样式
+4. dir ltr与rtl 指定内容的方向
+5. title 给标签设置一个文字提示，一般是图片与超链接使用的比较多
+6. lang 给标签指定语言
+
+## meta元信息
+1. 配置字符编码
+`<meta charset="utf-8">`
+2. 针对IE浏览器的兼容性配置
+`<meta http-equiv="X-UA-Compatible" content="IE=edge">`
+3. 针对移动端的配置
+`<meta name=viewport content="width=device-width, initial-scale=1.0">`
+4. 配置网页关键字
+`<meta name="keywords content="12341234"`
+5. 配置网页描述信息
+`<meta name=description content="2142134">`
+6. 针对搜索引擎爬虫配置
+`<meta name=robots content="2142134">`
+7. 配置网页作者
+`<meta name="author" contetn="shccc">`
+8. 配置网页生成工具
+`<meta name="generator" content="visual studio code">`
+9. 配置定义网页版权信息
+`<meta name="copyright" content="2023-2027版权所有">`
+10. 配置网页自动刷新
+`<meta http-equiv="refresh" content="10;url=http://www.baidu.com">`
