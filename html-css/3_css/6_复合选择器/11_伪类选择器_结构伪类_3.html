@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选中div中倒数第n个的儿子p元素 */
+        div>p:nth-last-child(3) {
+            color: antiquewhite;
+        }
+
+        div>p:nth-last-of-type(2) {
+            color: aqua;
+        }
+        span:only-child {
+            color: bisque;
+        }
+
+        /* 选中的是html的根元素 */
+        :root {
+            background-color: antiquewhite;
+        }
+
+        /* 选中的没有内容的div */
+        div:empty {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>12</span>
+    </div>
+    <span>dsfads√</span>
+    <div>
+        <p>第1个</p>
+        <p>第2个</p>
+        <p>第3个</p>
+        <p>第4个</p>
+        <p>第5个</p>
+        <p>第6个</p>
+        <p>第7个</p>
+        <p>第8个</p>
+        <p>第9个</p>
+        <p>第10个</p>
+    </div>
+    <div></div>
+</body>
+</html>

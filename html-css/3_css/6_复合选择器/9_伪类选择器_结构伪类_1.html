@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div>p 是子代选择器 */
+        /* first-child选择的是div中的第一个p儿子 */
+        div>p:first-child {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>王五</p>
+        <p class="first">张三</p>
+        <p>赵六</p>
+        <p>李四</p>
+    </div>
+
+
+    <!-- 注意first-child找的是所有儿子中去找 -->
+     <!-- 所以此处的李四是不会变红的 -->
+     <div>
+        <span>王五</span>
+        <p>李四</p>
+        <p>赵六</p>
+     </div>
+
+
+     <!-- 此时也选不中，因为是子代选择器，而不是后代选择器 -->
+     <div>
+        <span>
+            <p>张三</p>
+        </span>
+        <p>李四</p>
+        <p>赵六</p>
+     </div>
+</body>
+</html>

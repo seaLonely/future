@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>p:not(.fail) {
+            color: aqua;
+        }
+
+        div>p:not([title="hh"]) {
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>张三</p>
+        <p>王五</p>
+        <p class="fail">赵六</p>
+        <p>沼气</p>
+    </div>
+</body>
+</html>
