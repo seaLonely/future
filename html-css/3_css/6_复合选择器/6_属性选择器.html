@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 第一种写法：选中具有title属性的元素 */
+        [title] {
+            color: red;
+        }
+        /* 第二种写法：选中具有title属性且值等于测试的元素 */
+        [title="测试"] {
+            color: yellow;
+        }
+        /* 第三种写法 */
+        /* 具有title属性且以测试开头 */
+        [title^="测试"] {
+            color: aqua;
+        }
+        /* 第四种写法：选中具有title属性，且以..结尾 */
+        [title$="测试"] {
+            color: aquamarine;
+        }
+        /* 第五种写法 */
+        /* 具有title属性，且为u */
+        [title*="测试"] {
+            color: bisque;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>张三</div>
+    <div title="测试">李四</div>
+    <div title="测试">李四</div>
+    <div title="测试">李四</div>
+    <div title="测试">李四</div>
+    <div title="测试3">李四</div>
+    <div title="测试4">李四</div>
+    <div title="测试5">李四</div>
+    <div title="测试6">李四</div>
 </body>
 </html>
