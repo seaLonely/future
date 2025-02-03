@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container span.lalala {
+            color: rgb(255, 0, 0);
+        }
+        div>p>span:nth-child(1) {
+            color: aqua;
+        }
+        /* 权重的计算 */
+        /* (a , b , c) */
+        /* a：id选择器的个数 */
+        /* b：类、伪类、属性选择器的个数 */
+        /* 元素、伪元素选择器的个数 */
+        /* 权重一样就是后来者居上 */
+
+
+        /* important是最高权重的 */
+        .lalala {
+            color: aquamarine !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <span class="lalala">辣辣辣辣辣</span>
+            <span >哈哈哈哈哈哈哈</span>
+        </p>
+    </div>
+</body>
+</html>
