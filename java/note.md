@@ -363,3 +363,25 @@ String 与 char[] 可以互相转换
 2. enum的类型
 
 ### 记录类
+`String`,`Integer`这些类型都是不变类
+- 特点
+    - 定义class时使用`final`，无法派生子类
+    - 每个人字段使用`final`，保证创建实例后无法修改任何字段
+- Record关键字
+    - 就是不去改变定义的属性值，只能被赋值一次
+### BigInteger
+用来表示任意大小的整数  
+`BigInteger`内部有一个`int[]`来模拟一个非常大的整数
+- 运算
+``` java
+    BigInteger i1 = new BigInteger("132412334");
+    BigInteger i2 = new BigInteger("1234123421341234");
+    BigInteger i3 = i1.add(i2);
+```
+### BigDecimal
+表示一个任意大小且精度完全准确的浮点数
+### 常用的工具类
+- Math
+- HexFormat
+- Random
+- SecureRandom
