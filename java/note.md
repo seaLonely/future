@@ -1,5 +1,6 @@
 # 快速入门
 ## java入门_demo_01
+java是一种编译型语言  
 Java之父——詹姆斯·高斯林
 ### 名词解释
 - `jdk`: Java Development Kit
@@ -225,3 +226,31 @@ main中可以接受一个args参数
 interface是一个纯抽象类，所以是不能定义实例字段的。  
 但是是可以有静态字段的，且静态字段必须为final类型，无法修改。
 ### 包
+使用package来解决类名的冲突
+### 作用域
+1. public  
+可以被任何其他类访问
+2. private  
+无法被其他类访问，private的权限被限定在class内部，且与方法声明顺序无关  
+若存在嵌套类，那么嵌套类也是拥有访问权限的
+3. protected
+protected作用于继承关系  
+定义为protected的字段和方法可以被子类访问，以及子类的子类
+4. package  
+是指一个类允许访问同一个package的没有public、private修饰的class
+5. 局部变量  
+声明处到对应的块结束
+### 内部类
+1. inner class  
+如果一个类被定义 在另一个类的内部，则是内部类
+内部类的创建需要有一个外部类，不能脱离外部类的实例
+2. Anonymous Class  
+通过匿名类来进行实现
+3. Static Nested Class 静态内部类
+### classpath 和 jar
+1. classpath  
+是jvm使用到的一个环境变量，用来指示jvm如何搜索class
+2. jar包  
+可以把package组织的目录层级，以及各个目录下的所有文件都打成一个jar文件  
+### class版本
+### 模块
