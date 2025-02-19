@@ -254,3 +254,112 @@ protected作用于继承关系
 可以把package组织的目录层级，以及各个目录下的所有文件都打成一个jar文件  
 ### class版本
 ### 模块
+## Java核心类_demo_06
+### 字符串和编码
+#### 字符串比较 equal
+#### 去除首尾的空白字符 trim
+#### 替换字符串
+```
+    String s= "hello";
+    s.replace("l", "w"); // 所有的l就会被换成w
+```
+#### 分割字符串
+```
+    String s = "a,b,c,d";
+    String[] ss = s.split("\\,");
+```
+#### 拼接字符串
+使用静态方法join  
+``` java
+    String[] arr = {"a", "b", "c"};
+    String s = String.join("****", arr);
+```
+#### 格式化字符串
+fromatted && format
+``` java
+    String s = "Hi %s, your score is %d";
+    System.out.println(s.formatted("Alice", 80));
+    System.out.println(String.format("Hi %s, your score is %.2f", "Bob", 59.5))
+```
+#### 类型转换
+1. 任意基本类型转换为字符串(valueof)
+``` java
+    String.valueOf(123); // "123"
+```
+2. 把字符串转换为其他类型，需要根据实际的情况
+``` java
+    int n1 = Integer.parseInt("123"); // 123
+    int n2 = Integer.parseInt("ff", 16); // 按16进制转换，255
+
+    // 转换为boolean
+    boolean b1 = Boolean.parseBoolean("true"); // true
+    boolean b2 = Boolean.parseBoolean("false"); // false
+```
+3. 转换为char[]  
+String 与 char[] 可以互相转换
+``` java
+    char[] cs = "Hello".toCharArray(); // String -> cahr[]
+    String s = new String(cs); // char[] -> String
+```
+如果修改了char[]，String并不改变
+### StringBuilder
+用于高效拼接字符串  
+```
+    StringBuilder sb = new StringBuilder(1024);
+    for (int i = 0; i < 1000; i++) {
+        sb.append(',');
+        sb.append(i);
+    }
+    String s = sb.toString();
+```
+### StringJoiner
+实现用分隔符拼接数组  
+``` java
+    String[] names = {"Bob", "Alice", "Grace"};
+    // Hello 与 ！是在指定开头与结尾
+    var sj = new StringJoiner(", ", "Hello", "!");
+    for (String name : names) {
+        sj.add(name);
+    }
+    System.out.println(sj.toString())
+```
+- String.join
+``` java
+    String[] names = {"Bob", "Alice", "Grace"};
+    var s = String.join(", ", names);
+```
+### 包装类型
+#### 基本类型与引用类型
+    - boolean->Boolean
+    ...
+#### 进制转换
+``` java
+    int x1 = Integer.parseInt("100"); // 100
+    int x2 = Integer.parseInt("100", 16); // 256，按16进制进行解析
+```
+常用的静态变量
+``` java
+    // boolean只有两个值true/false，其包装类型只需要引用Boolean提供的静态字段:
+    Boolean t = Boolean.TRUE;
+    Boolean f = Boolean.FALSE;
+    // int可表示的最大/最小值:
+    int max = Integer.MAX_VALUE; // 2147483647
+    int min = Integer.MIN_VALUE; // -2147483648
+    // long类型占用的bit和byte数量:
+    int sizeOfLong = Long.SIZE; // 64 (bits)
+    int bytesOfLong = Long.BYTES; // 8 (bytes)
+```
+### JavaBean
+主要用来传递数据
+### 枚举类
+- enum
+```
+    enum Weekday {
+        SUN, MON, TUE, WED, THU, FRI, SAT;
+    }
+```
+1. enum的比较  
+    直接使用==
+2. enum的类型
+
+### 记录类
