@@ -12,7 +12,7 @@ public class Main {
     // 表示class是公开
     public static void main(String[] args) {
         // 向屏幕输出文本
-        System.out.printf("Hello and welcome!");
+        System.out.print("Hello and welcome!");
 //        for (int i = 1; i <= 5; i++) {
 //            System.out.println("i = " + i);
 //        }
@@ -29,5 +29,35 @@ public class Main {
         int y  = 5;
         x = y;
         System.out.println("X = " + x);
+
+        // 整数运算
+        int i = (100 + 200) * (99 - 88);
+        System.out.println(i);
+
+        // 自增++
+        i++;
+        // 自减--
+        i--;
+
+        // 移位运算
+        int n = 7;
+        int a = n >> 1; // 14
+
+        // 位运算
+        // &
+        // |
+        // ~
+        // ^
+
+        // 数组类型
+
+        // 数组
+        int[] stus = new int[5];
+        stus[0] = 100;
+        stus[1] = 200;
+        stus[2] = 300;
+        stus[3] = 400;
+        stus[4] = 500;
+        System.out.println(stus);
     }
 }
